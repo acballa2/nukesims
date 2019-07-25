@@ -1,0 +1,92 @@
+\documentclass[11pt]{article}
+%ok hey a cool thing is you can comment out code in here that's nice
+%Overleaf is a website with templates and stuff that you can use to skip a lot of this formatting
+%This top part before \begin{document} is called the preamble
+%Let's do some crazy formatting stuff
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+%don't know why it's called fancy but it lets you not have default header and footer
+\pagestyle{fancy}
+%don't know what this does but I assume it sets the scene for us to use fancy next
+\fancyhead{}
+\fancyfoot{}
+%doing that clears the default settings for the header and footer
+\fancyhead[L]{\slshape\MakeUppercase{Maybe a Title}}
+\fancyhead[R]{Anna Balla}
+%The L or the R is for left or right, slshape means italics, MakeUppercase (make sure M and U are uppercase) makes it uppercase
+\fancyfoot[R]{\thepage}
+%gives you a page number
+\setlength{\headheight}{14pt}
+%I don't know exactly what just happened but this is what you do when it tells you your header is too small
+%\renewcommand{\headrulewidth}{0pt} gets rid of the line in the header if you so choose
+
+\begin{document}
+%\title{Practice \LaTeX \ Document}
+%\author{Anna Balla}
+%\date{\today}
+%\maketitle
+%I commented all that out because the page that has that title on it doesn't seem to want to follow my formatting stuff so I'm gonna see if there's a better way
+\begin{titlepage}
+\begin{center}
+\vspace*{1cm}
+%pushes the stuff below it down whatever your specified amount is (can be in cm or in)
+\Large{\textbf{Here's maybe the name of the thing}}\\
+\vfill
+%adds vertical space all the way to the end of the page
+\line(1,0){400}\\[1mm]
+%horizontal line
+\Huge{\textbf{I can't find the ARFC report template}}\\[3mm]
+\Large{\textbf{So this is what we're using for now}}\\[1mm]
+%these little bracketed measuremens add space between lines
+\line(1,0){400}\\
+\vfill
+%doing this again sort of centers the title vertically though I have pretty much no idea what you'd do if you wanted to move it around any more
+\large{By Anna Balla}
+\end{center}
+\end{titlepage}
+
+%YO AND THE PAGE NUMBERS DONT APPEAR ON THE TITLE PAGE FU YEAH
+\pagebreak
+
+\tableofcontents
+%\tableofcontents will take all your sections from down under and turn them into a table of contents for you, that's fantastic
+\thispagestyle{empty}
+\clearpage
+%these things make it so there's no header and footer and page number on your table of contents
+
+\setcounter{page}{1}
+%makes it so page 1 is numbered 1 instead of 2
+
+%here's some stuff about formatting your line spacing etc. & you can put this all the way before the title page if you want
+%\parindent 0ex %gets rid of any indents
+%\setlength{\parindent}{4em} %sets how far in your indent is
+%\setlength{\parskip}{1em} %sets how big the space is after a paragraph
+%\renewcommand{\baselinestretch}{1.5} %sets the line spacing
+
+This is a line of text.\\ 
+This is an equation $y=mx+b$.\\
+I can also \textbf{bold things} and \textit{italicize things}.\\
+I can also put equations in equation format like so: $$y=ax^2+bx+c$$
+Double backslash is a soft return and if you actually hit return twice you can create a new paragraph with an indent.
+
+Here's the new paragraph.\\
+You can also make words \begin{Large} bigger \end{Large} or \begin{small} smaller \end{small}. Other options are \begin{large} large \end{large} or \begin{Huge} Huge \end{Huge} or \begin{tiny} tiny \end{tiny}. You get the idea.
+
+\begin{center} This is how you would center your text. \end{center}
+
+\begin{flushleft}This is for left-justified text.\end{flushleft}
+
+\begin{flushright} This is for right-justified text.\end{flushright}
+
+Also Latex seems to not like the soft return if you are switching up some formatting. 
+
+Lets make sections\footnote{Wild! you can make footnotes!}
+
+\section{Section 1}
+\subsection{Subsection 1}
+Here's some info in section 1 yee-haw.
+\subsection{Subsection 2}
+\section{Section 2}
+
+Look they even make the text nice and bold and big for ya.  Could be helpful for making a table of contents. Maybe press f1 to compile quick. Ok actually you gotta press Fn f1 because your f1 is a mute button. 
+\end{document}
